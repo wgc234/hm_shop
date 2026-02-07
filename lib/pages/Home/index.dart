@@ -4,6 +4,7 @@ import 'package:hm_shop/components/Home/HmHot.dart';
 import 'package:hm_shop/components/Home/HmMortList.dart';
 import 'package:hm_shop/components/Home/HmSlider.dart';
 import 'package:hm_shop/components/Home/HmSuggestion.dart';
+import 'package:hm_shop/viewmodels/banner_item.dart';
 
 class HomeView extends StatefulWidget {
   HomeView({Key? key}) : super(key: key);
@@ -12,9 +13,19 @@ class HomeView extends StatefulWidget {
   _HomeViewState createState() => _HomeViewState();
 }
 
+ List<Banneritem> _getBanner(){
+    return [
+      Banneritem(id: "1", imageUrl: "https://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/meituan/1.jpg"),
+      Banneritem(id: "1", imageUrl: "https://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/meituan/2.png"),
+      Banneritem(id: "1", imageUrl: "https://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/meituan/3.jpg")
+    ];
+}
+
+
+
 List<Widget> _getSlivers() {
   return [
-    SliverToBoxAdapter(child: Hmslider()),
+    SliverToBoxAdapter(child: Hmslider(bannerItems: _getBanner(),)),
     SliverToBoxAdapter(child: SizedBox(height: 10)),
     SliverToBoxAdapter(child: Hmcategory()),
     SliverToBoxAdapter(child: SizedBox(height: 10)),

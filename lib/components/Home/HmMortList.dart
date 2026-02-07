@@ -13,17 +13,17 @@ class _HmmortlistState extends State<Hmmortlist> {
     return SliverGrid.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-      mainAxisSpacing: 10,
-        crossAxisSpacing: 10
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
       ),
       itemCount: 100,
-      
+
       itemBuilder: (context, index) {
         return Container(
           height: 100,
           color: Colors.blue,
           alignment: Alignment.center,
-          child: Text("商品${index+1}",style: TextStyle(color: Colors.white),),
+          child: Text("商品${index + 1}", style: TextStyle(color: Colors.white)),
         );
       },
     );
