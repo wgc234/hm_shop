@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hm_shop/pages/Login/index.dart';
 import 'package:hm_shop/pages/Main/index.dart';
+import 'package:hm_shop/pages/Test/index.dart';
 
 Widget getRouteWidget(){
   return MaterialApp(
